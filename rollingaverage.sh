@@ -1,5 +1,7 @@
 #!/bin/bash
-# This script takes a tab delimited table of numbers and computes rolling averages
+# This script takes a tab delimited table of numbers and computes rolling averages for each column
+# It determines automatically number of elements in each row and average between them separately
+# Output is CSV
 # (c) Ilya Fomin , 2018
 
 #Averaging window size
