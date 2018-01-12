@@ -35,7 +35,7 @@ echo "Found $argnum data columns to be averaged"
 # report how many folds do we shrink the dataset
 echo "Rolling average window is $window"
 
-# init arrays and make sure they are zeroed
+# init array and make sure it is zeroed
 for (( j=1 ; j<=$argnum ; j=j+1 ))
 do
   total[$j]=0.0;
