@@ -4,6 +4,7 @@
 # Output is CSV
 # Download https://github.com/ilyafomin/shell-scripts/blob/master/rollingaverage_example.txt for an example.
 # run it as ./rollingaverage.sh rollingaverage_example.txt 
+# to write the ourput in a new file, use ./rollingaverage.sh rollingaverage_example.txt rollingaverage_output.txt
 # (c) Ilya Fomin , 2018
 
 #Averaging window size
