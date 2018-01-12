@@ -4,7 +4,7 @@
 # Output is CSV
 # Download https://github.com/ilyafomin/shell-scripts/blob/master/rollingaverage_example.txt for an example.
 # run it as ./rollingaverage.sh rollingaverage_example.txt 
-# to write the ourput in a new file, use ./rollingaverage.sh rollingaverage_example.txt rollingaverage_output.txt
+# to write the output in a new file, use ./rollingaverage.sh rollingaverage_example.txt rollingaverage_output.txt
 # (c) Ilya Fomin , 2018
 
 #Averaging window size
@@ -30,7 +30,7 @@ fi
 
 # learn and report number of elements in each row
 argnum=$(head -n 1 $filename | wc -w)
-echo "Found $argnum data entries to be averaged"
+echo "Found $argnum data columns to be averaged"
 
 # report how many folds do we shrink the dataset
 echo "Rolling average window is $window"
