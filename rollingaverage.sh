@@ -2,6 +2,8 @@
 # This script takes a tab delimited table of numbers and computes rolling averages for each column
 # It determines automatically number of elements in each row and average between them separately
 # Output is CSV
+# Download https://github.com/ilyafomin/shell-scripts/blob/master/rollingaverage_example.txt for an example.
+# run it as ./rollingaverage.sh rollingaverage_example.txt 
 # (c) Ilya Fomin , 2018
 
 #Averaging window size
