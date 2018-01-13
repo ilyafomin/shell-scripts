@@ -18,23 +18,23 @@ then
   exit
 fi
 filename=$1
-echo "Input file: $filename"
+echo -e "Input file: \e[32m$filename\e[0m"
 outputfn=$2
 if [ "$outputfn" = "" ]
 then
   echo "No output file will be written; all the output goes to the console"
 else
-  echo "Output file: $outputfn"
+  echo -e "Output file: \e[32m$outputfn\e[0m"
   # flush it contents
   rm $outputfn &> /dev/null
 fi
 
 # learn and report number of elements in each row
 argnum=$(head -n 1 $filename | wc -w)
-echo "Found $argnum data columns to be averaged"
+echo -e "Found \e[31m$argnum\e[0m data columns to be averaged"
 
 # report how many folds do we shrink the dataset
-echo "Rolling average window is $window"
+echo -e "Rolling average window is \e[32m$window\e[0m"
 
 # init array and make sure it is zeroed
 for (( j=1 ; j<=$argnum ; j=j+1 ))
@@ -86,3 +86,13 @@ do
 #    exit
   fi
 done
+
+# final report
+inputsize=$( wc -c $filename | sed 's/[^0-9]*//g' )
+if [ "$outputfn" != "" ]
+then
+  outputsize=$( wc -c $outputfn | sed 's/[^0-9]*//g' )
+  echo -e "Finished: input of \e[31m$inputsize\e[0m bytes shrinked to \e[31m$outputsize\e[0m bytes"
+else
+  echo -e "Finished: input file containing \e[31m$inputsize\e[0m bytes processed"
+fi
