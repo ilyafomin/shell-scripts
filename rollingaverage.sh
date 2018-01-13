@@ -46,7 +46,7 @@ j=1 #counter of elements
 k=0 #counter of rows
 
 # it returns consequentially each element line by line
-for i in $( awk '{ print }' tempdata.txt )
+for i in $( awk '{ print }' $filename )
 do
   # it adds the current value to a specific array term and increases index
   total[$j]=$(echo "scale=5; ${total[$j]} + $i" | bc)
