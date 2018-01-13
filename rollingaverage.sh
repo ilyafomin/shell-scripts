@@ -26,7 +26,7 @@ then
 else
   echo "Output file: $outputfn"
   # flush it contents
-  echo "" > $outputfn
+  rm $outputfn &> /dev/null
 fi
 
 # learn and report number of elements in each row
