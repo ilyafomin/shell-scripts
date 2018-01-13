@@ -1,10 +1,11 @@
 #!/bin/bash
 # This script takes a tab delimited table of numbers and computes rolling averages for each column
-# It determines automatically number of elements in each row and average between them separately
+# It determines automatically number of elements (N) in each row and average between them separately
+# Only each Nth average is written out, so that script shrinks the dataset by the factor of N
 # Output is CSV
 # Download https://github.com/ilyafomin/shell-scripts/blob/master/rollingaverage_example.txt for an example.
 # run it as ./rollingaverage.sh rollingaverage_example.txt 
-# to write the output in a new file, use ./rollingaverage.sh rollingaverage_example.txt rollingaverage_output.txt
+# to send the output to a new file, use ./rollingaverage.sh rollingaverage_example.txt rollingaverage_output.txt
 # (c) Ilya Fomin , 2018
 
 #Averaging window size
