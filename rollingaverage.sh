@@ -6,6 +6,7 @@
 # Download https://github.com/ilyafomin/shell-scripts/blob/master/rollingaverage_example.txt for an example.
 # run it as ./rollingaverage.sh rollingaverage_example.txt 
 # to send the output to a new file, use ./rollingaverage.sh rollingaverage_example.txt rollingaverage_output.txt
+# Take a look on a newer version : https://github.com/ilyafomin/shell-scripts/blob/master/rollingaverage2.sh
 # (c) Ilya Fomin , 2018
 
 #Averaging window size
